@@ -1,0 +1,39 @@
+.section {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info-block {
+        display: block;
+        width: 40%;
+    }
+
+    &__image-block {
+        display: block;
+        width: 40%;
+        border-radius: 10px;
+    }
+
+    @media only screen and (max-width: 970px) {
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__info-block {
+        display: block;
+        width: 90%;
+        text-align: center;
+    }
+
+    &__image-block {
+        display: block;
+        width: 90%;
+        border-radius: 10px;
+    }
+}
+}

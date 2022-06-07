@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "404.scss",
+	"sources": [
+		"../stdin"
+	],
+	"names": [],
+	"mappings": "AACE,AAAD,cAAU,AAAC,CACV,OAAO,CAAE,IAAI,CACb"
+}

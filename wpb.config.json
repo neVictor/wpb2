@@ -1,0 +1,136 @@
+{
+    "watcher_ignored": [
+        "node_modules",
+        ".git",
+        ".map"
+    ],
+    "tasks": [
+        {
+            "module": "js",
+            "flags": [
+                "--d"
+            ],
+            "src": "./src/js/",
+            "watch": "./src/js/**/*.js",
+            "dest": "./dest/js",
+            "dest-map": "./dest/js/map",
+            "settings": {
+                "babel": {
+                    "comments": false,
+                    "compact": true,
+                    "minified": true,
+                    "sourceMaps": true,
+                    "presets": [
+                        [
+                            "@babel/env",
+                            {
+                                "targets": {
+                                    "browsers": [
+                                        "last 2 Chrome versions"
+                                    ]
+                                }
+                            }
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "module": "ttftowoff2",
+            "flags": [
+                "--d"
+            ],
+            "watch": "./src/fonts/*.ttf",
+            "dest": "./dest/fonts/",
+            "settings": {}
+        },
+        {
+            "module": "ttftowoff",
+            "flags": [
+                "--d"
+            ],
+            "watch": "./src/fonts/*.ttf",
+            "dest": "./dest/fonts/",
+            "settings": {}
+        },
+        {
+            "module": "htmltoscss",
+            "flags": [
+                "--d"
+            ],
+            "watch": "./src/*.html",
+            "dest": "./src/scss",
+            "settings": {}
+        },
+        {
+            "module": "htmltoscss",
+            "flags": [
+                "--d"
+            ],
+            "watch": "./src/html/*.html",
+            "dest": "./src/scss/mod",
+            "settings": {}
+        },
+        {
+            "module": "html",
+            "flags": [
+                "--d"
+            ],
+            "src": "./src/",
+            "watch": "./src/**/*.html",
+            "include": "./src/html",
+            "dest": "./dest/",
+            "settings": {
+                "pretty": {
+                    "ocd": true
+                }
+            }
+        },
+        {
+            "module": "css",
+            "flags": [
+                "--d"
+            ],
+            "watch": "./src/scss/*.scss",
+            "dest": "./dest/css",
+            "dest-map": "./dest/css/map",
+            "settings": {
+                "sass-renderer": {
+                    "data": "data",
+                    "outputStyle": "compressed",
+                    "sourceMap": true,
+                    "includePaths": [
+                        "./src/scss"
+                    ]
+                }
+            }
+        },
+        {
+            "module": "fonttoscss",
+            "flags": [
+                "--d"
+            ],
+            "watch": "./dest/fonts/",
+            "dest": "./src/scss/mod/fonts.scss",
+            "settings": {}
+        },
+        {
+            "module": "browsersync",
+            "flags": [
+                "--d"
+            ],
+            "watch": "./dest",
+            "name": "myawesomesite",
+            "settings": {
+                "browsersync": {
+                    "server": {
+                        "baseDir": "./dest/",
+                        "directory": false
+                    },
+                    "notify": false,
+                    "port": 5500
+                }
+            }
+        }
+    ]
+}
